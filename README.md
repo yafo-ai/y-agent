@@ -30,7 +30,7 @@ Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场�
 
 
 ## 系统架构图
-![](../imgs/system_architecture.png)
+![](./system_architecture.png)
 
 
 ## 核心概念
@@ -38,7 +38,7 @@ Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场�
 流程图就是核心组件，支持可视化编排，可以多智能体和固定流程混合模式。
 #### 有向有环图
 流程图的核心是有向有环图，可以实现以下流程：
-![](../imgs/flow_chart.png)
+![](./flow_chart.png)
 
 
 #### 结束条件
@@ -49,16 +49,55 @@ Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场�
 - 某个节点输出了 `command=|<|terminate(message="")|>|` 指令。系统会停止所有后续节点的执行。
 #### 分身
 
-<include>./work_flow/public/bilocation.mdx</include>
+
+分身是一种把 单个 提示词拆分成 多个提示词的技术。类似于孙悟空，拔毛分身成多个，然后同时做不同的事情。
+
+拆分好的提示词，相当于多个分身，会并发的调用大模型。
+
+<Callout type="info"> 
+**分身**（拆分任务）的好处：
+- 减少模型推理时间，提升效率。
+- 让模型专注某一个任务，减少干扰，提升准确率。
+</Callout>
+
+因为大模型节点可以配置以下任务：
+- 使用工具。
+- 自动选择下游角色。
+- 输出参数。
+
+所有分身最多会有三个。同时分身功能和ReAct是互斥的。
+
+具体案例，可以查看Y-Agent框架安装好，自带的案例。
+> 以上分身是同时运行的，这样既保证速度，效果又好。缺点是，浪费token。
 
 效果如下：
 
-![alt](./work_flow/imgs/demo-bilocation.gif)
+![alt](./demo-bilocation.gif)
 #### 工作空间
 
-<include>./work_flow/public/work_space.mdx</include>
+
+> 类似于人类协作的方式，可能存在 **多个角色** 共同编辑同一个变量。
+
+所以定义了一个用于公共操作的空间“**工作空间变量**”，在提示词模板中使用“**space**”作为标记。
+
+
+**工作空间变量** 分为三种类型，以满足不同的数据处理需求：覆盖型变量\追加型变量\不重复追加型变量
 
 #### 聊天室
 
 聊天室里存放各个节点间的消息传递，以及接待您发送给用户的消息，可以实现多Agent协作。
+
+
+## 相关资料：
+
+[Y-Agent Studio官方介绍](http://112.126.109.80/docs)
+
+[Y-Agent 使用说明](http://112.126.109.80/docs/y-agent/quick_start)
+
+[Y-Squeeze 使用说明](http://112.126.109.80/docs/y-squeeze/introduction)
+
+[Y-Trainer 介绍](http://112.126.109.80/docs/y-trainer/introduction)
+
+[Y-Agent Studio官网](http://112.126.109.80)
+
 
