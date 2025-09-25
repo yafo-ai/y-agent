@@ -30,7 +30,7 @@ Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场�
 
 
 ## 系统架构图
-![](./system_architecture.png)
+![](system_architecture.png)
 
 
 ## 核心概念
@@ -38,7 +38,7 @@ Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场�
 流程图就是核心组件，支持可视化编排，可以多智能体和固定流程混合模式。
 #### 有向有环图
 流程图的核心是有向有环图，可以实现以下流程：
-![](./flow_chart.png)
+![](flow_chart.png)
 
 
 #### 结束条件
@@ -72,7 +72,7 @@ Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场�
 
 效果如下：
 
-![alt](./demo-bilocation.gif)
+![alt](demo-bilocation.gif)
 #### 工作空间
 
 
