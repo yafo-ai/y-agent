@@ -1,0 +1,50 @@
+{
+  "sys_config.knowledge": {
+    "chunk_size": 2048,
+    "chunk_size_overlap": 0
+  },
+  "sys_config.vector_provider": {
+    "selected": {
+      "provider_name": "chromadb",
+      "connect_type": "local(本地)",
+      "connect_str": {
+        "host": "http://localhost",
+        "port": 8000,
+        "param_config": {
+          "collection_metadata": {
+            "hnsw:space": "cosine",
+            "hnsw:search_ef": 200
+          }
+        }
+      }
+    },
+    "providers": [
+      {
+        "provider_name": "chromadb",
+        "connect_type": [
+          "local(本地)",
+          "remote(远程)"
+        ]
+      }
+    ]
+  },
+  "sys_config.security": {
+    "access_token_expire_minutes": 2880,
+    "refresh_token_expire_minutes": 1440,
+    "secret_key": "lLNiBWPGiEmCLLR9kRGidgLY7Ac1rpSWwfGzTJpTmCU",
+    "algorithm": "HS256"
+  },
+  "sys_config.embedding_provider": {
+    "selected": {
+      "provider_name": "vllm",
+      "model_name": "bge-m3",
+      "connect_url": "http://192.168.50.225:8001/v1/embeddings",
+      "api_key": ""
+    },
+    "providers": [
+      "openai",
+      "vllm",
+      "xinference"
+    ]
+  }
+}

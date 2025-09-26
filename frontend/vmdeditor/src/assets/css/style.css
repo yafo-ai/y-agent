@@ -1,0 +1,215 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --zindex: 0;
+  --zindex1: 1;
+  --zindex10: 10;
+  --zindex100: 100;
+  --zindex1000: 1000;
+  --zindex10000: 10000;
+  --zindexMax: 100000;
+  --mg1: 18px 10px;
+  --bradius: 10px;
+  --cardpading: 10px 18px;
+  --shdmin: 0 2px 6px 0 rgba(0, 0, 0, .05);
+  --shdminActive: 0 2px 6px 0 rgba(0, 0, 0, .1);
+  --footH: 50px;
+  --flcolor: #bd1d21;
+  --nut-primary-color: rgb(241, 78, 81);
+  --nut-primary-color-end: rgb(189, 29, 33);
+  --searchbg: linear-gradient(rgb(236, 134, 89), rgb(238, 76, 73));
+  --flbg: linear-gradient(135deg, var(--nut-primary-color), var(--nut-primary-color-end));
+  --btnbg: linear-gradient(135deg, var(--nut-primary-color), var(--nut-primary-color-end));
+  --nut-button-primary-background-color: var(--btnbg);
+  --btncolor: #fff;
+  --appbg: #f5f5f5;
+  --labelcolor: #999;
+  --containcolor: var(--el-text-color-regular);
+  --dpcolor: #999;
+  --ccolor: #ccc;
+  --titlecolor: #212121;
+  --maskbg: rgba(0, 0, 0, 0.5);
+  --chakra-ring-offset-width: 0px;
+  --chakra-ring-offset-color: #fff;
+  --chakra-ring-color: rgba(66, 153, 225, 0.6);
+  --chakra-ring-offset-shadow: 0 0 #0000;
+  --chakra-ring-shadow: 0 0 #0000;
+  --chakra-space-x-reverse: 0;
+  --chakra-space-y-reverse: 0;
+  --chakra-colors-transparent: transparent;
+  --chakra-colors-white: #FFFFFF;
+
+
+  --chakra-colors-gray-100: #EDF2F7;
+  --chakra-colors-gray-200: #E2E8F0;
+
+
+
+  --chakra-colors-myWhite-600: #F4F6F8;
+
+  --chakra-colors-myGray-50: #F7F8FA;
+  --chakra-colors-myGray-100: #F4F4F7;
+  --chakra-colors-myGray-200: #E8EBF0;
+  --chakra-colors-myGray-500: #667085;
+  --chakra-colors-myGray-600: #485264;
+
+
+  --chakra-colors-primary-1: rgba(51, 112, 255, 0.1);
+  --chakra-colors-primary-50: #F0F4FF;
+  --chakra-colors-primary-100: #E1EAFF;
+  --chakra-colors-primary-300: #94B5FF;
+  --chakra-colors-primary-600: #3370FF;
+  
+  --chakra-colors-borderColor-low: #E8EBF0;
+
+  --chakra-fontSizes-xs: 0.8rem;
+
+  --chakra-fontSizes-lg: 1.15rem;
+
+
+  --chakra-fontWeights-bold: 700;
+
+
+
+
+  --chakra-radii-md: 8px;
+  --chakra-space-1: 0.25rem;
+  --chakra-space-2: 0.5rem;
+  --chakra-space-3: 0.75rem;
+  --chakra-space-4: 1rem;
+
+  --chakra-shadows-2: 0px 0px 1px 0px rgba(19, 51, 107, 0.08), 0px 4px 4px 0px rgba(19, 51, 107, 0.05);
+  --chakra-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --chakra-shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+
+
+
+
+
+
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+textarea::-webkit-scrollbar,
+.el-notification__content::-webkit-scrollbar,
+.c-scroll-box::-webkit-scrollbar,
+.c-scroll-contain::-webkit-scrollbar,
+.c-scroll-contain *::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 6px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 12px;
+}
+.el-notification__content{
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+textarea::-webkit-scrollbar-thumb,
+.el-notification__content::-webkit-scrollbar-thumb,
+.c-scroll-box::-webkit-scrollbar-thumb,
+.c-scroll-contain::-webkit-scrollbar-thumb,
+.c-scroll-contain *::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px #bbb;
+    box-shadow: inset 0 0 5px #bbb;
+    background: #fff;
+}
+
+textarea::-webkit-scrollbar-track,
+.el-notification__content::-webkit-scrollbar-track,
+.c-scroll-box::-webkit-scrollbar-track,
+.c-scroll-contain::-webkit-scrollbar-track,
+.c-scroll-contain *::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    background: #fff;
+}
+.c-scroll-box,
+.c-overauto{
+  overflow: auto;
+}

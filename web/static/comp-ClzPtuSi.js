@@ -1,0 +1,1 @@
+function o(n,s,f="/"){var a,c;if(n){s.push(n);return}(c=(a=window.history)==null?void 0:a.state)!=null&&c.back?s.go(-1):s.push(f)}function r(n){return n?(n=n.replace("T"," "),n=n.split(".")[0],n):""}export{r as a,o as g};

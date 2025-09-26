@@ -1,0 +1,1 @@
+function r(e){return/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(e)}function a(e){try{return JSON.parse(e),!0}catch{return!1}}function s(e){return/^-?\d+$/.test(e)}function n(e){return/^[\d.]+$/.test(e)}function i(e){return/[\s!@#$%^&*()\-。，；‘’+=\[\]{}|\\;:'",./<>?]/.test(e)}function u(e){return/^[a-z_]*$/.test(e)}export{u as a,s as b,n as c,a as d,r as i,i as v};
