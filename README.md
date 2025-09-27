@@ -16,6 +16,28 @@ Y-Agent Studio 框架 完整开源，可商用，不区分社区版 商用版，
 目前为Bate版，10月会发布正式版
 Y-Agent，设计目标是 **最大化运行效率** 和 **应对复杂业务场景** ，这里主要介绍和大部分Agent框架不一样的特点。
 
+### 下载安装
+
+运行以下命令
+创建conda环境
+```
+conda create --name y-agent python=3.11.8
+```
+
+启动conda环境
+```
+conda activate y-agent
+```
+
+安装依赖（注意命令所在目录）
+```
+cd y-agent
+pip install -r requirements.txt
+```
+启动项目
+```
+python main.py
+```
 ### 核心功能
 
 | 功能         | 功能描述                                                                 |
